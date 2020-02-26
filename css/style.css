@@ -8,6 +8,19 @@
   margin: auto;
 }
 
+@media (max-width: 1024px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+}
+
 @font-face {
   font-family: 'Proxima Nova Semibold';
   src: url("../fonts/ProximaNova-Semibold.eot");
@@ -58,9 +71,9 @@ body {
 
 .navbar .menu {
   position: absolute;
-  z-index: -1;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  z-index: 0;
+  -webkit-transform: translateY(-300%);
+          transform: translateY(-300%);
   -webkit-transition: 0.2s;
   transition: 0.2s;
   top: 80px;
@@ -145,9 +158,48 @@ body {
   font-family: 'Proxima Nova Semibold', sans-serif;
 }
 
+@media (max-width: 600px) {
+  .navbar {
+    position: fixed;
+    width: 100%;
+  }
+  .navbar-wrap {
+    min-height: 60px;
+  }
+  .navbar__logo {
+    height: 60px;
+  }
+  .navbar .menu {
+    position: fixed;
+    top: 60px;
+  }
+  .navbar .menu__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar .menu-btn {
+    height: 60px;
+  }
+  .navbar .menu__link {
+    margin-bottom: 50px;
+  }
+  .navbar .menu__link:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .hero {
   background: url("../img/hero/hero-bg.jpg") no-repeat center;
   background-size: cover;
   padding-top: 690px;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    background-size: 700px;
+    padding-top: 250px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
