@@ -42,13 +42,39 @@ body {
   color: #262626;
 }
 
-.border-o {
-  border: 2px solid #103c36;
+.button-o {
+  border: 2px solid #469557;
   padding: 20px 20px;
   font-size: 12px;
   text-transform: uppercase;
-  color: #103c36;
+  color: #469557;
+  background: #fff;
   font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.button {
+  border: none;
+  padding: 20px 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+  background: #469557;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.bg-secondary {
+  background: #469557;
+}
+
+.input {
+  height: 80px;
+  padding-left: 30px;
+  border: 1px solid #469557;
+}
+
+@madia (max-width: 600px) {
+  font-size: 10px;
+  font-size: 10px;
 }
 
 .navbar {
@@ -80,7 +106,7 @@ body {
   right: 0;
   width: 100%;
   padding: 20px 0;
-  background: url("../img/hero/menu-bg.jpg") no-repeat center;
+  background-color: #469557;
   border: none;
   border-bottom: 2px solid #fff;
 }
@@ -201,5 +227,63 @@ body {
     background-size: 700px;
     padding-top: 250px;
   }
+}
+
+.offer {
+  padding: 129px 0;
+}
+
+.offer-block {
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 15px rgba(38, 38, 38, 0.4);
+          box-shadow: 0 5px 15px rgba(38, 38, 38, 0.4);
+  padding: 80px;
+  margin-top: -150px;
+  background: #fff url("../img/offer-bg.jpg") no-repeat center right;
+  background-size: contain;
+}
+
+.offer__title {
+  font-size: 25px;
+  margin-top: 0;
+  text-transform: uppercase;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+  margin-bottom: 20px;
+}
+
+.offer__subtitle {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.offer .form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.offer .form__label {
+  display: block;
+  font-size: 15px;
+}
+
+.offer .form__group {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.offer .form__input {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.offer .form__button {
+  margin-top: 10px;
+  width: 60%;
+  font-size: 15px;
 }
 /*# sourceMappingURL=style.css.map */
