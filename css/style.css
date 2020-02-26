@@ -50,6 +50,8 @@ body {
   color: #469557;
   background: #fff;
   font-family: 'Proxima Nova Semibold', sans-serif;
+  cursor: pointer;
+  outline: none;
 }
 
 .button {
@@ -60,6 +62,8 @@ body {
   color: #fff;
   background: #469557;
   font-family: 'Proxima Nova Semibold', sans-serif;
+  cursor: pointer;
+  outline: none;
 }
 
 .bg-secondary {
@@ -72,13 +76,27 @@ body {
   border: 1px solid #469557;
 }
 
+.select {
+  height: 80px;
+  padding-left: 30px;
+  border: 1px solid #469557;
+  cursor: pointer;
+  outline: none;
+}
+
 @madia (max-width: 600px) {
   font-size: 10px;
   font-size: 10px;
 }
 
+.header {
+  background-color: #469557;
+}
+
 .navbar {
   background-color: #fff;
+  position: fixed;
+  width: 100%;
 }
 
 .navbar-wrap {
@@ -96,7 +114,7 @@ body {
 }
 
 .navbar .menu {
-  position: absolute;
+  position: fixed;
   z-index: 0;
   -webkit-transform: translateY(-300%);
           transform: translateY(-300%);
@@ -217,20 +235,66 @@ body {
 }
 
 .hero {
-  background: url("../img/hero/hero-bg.jpg") no-repeat center;
-  background-size: cover;
-  padding-top: 690px;
+  background: #469557 url("../img/hero/hero-bg.jpg") no-repeat center left 200px;
+  background-size: contain;
+  padding-top: 250px;
+  padding-bottom: 300px;
+  text-align: right;
+  color: #fff;
 }
 
-@media (max-width: 600px) {
+.hero__title {
+  font-size: 30px;
+  padding-right: 200px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.hero__subtitle {
+  font-size: 20px;
+  padding-right: 200px;
+}
+
+@media (max-width: 1023px) {
   .hero {
-    background-size: 700px;
+    background: #469557 url("../img/hero/hero-bg.jpg") no-repeat top;
+    background-size: contain;
+    background-size: 150px;
     padding-top: 250px;
+    padding-bottom: 200px;
+    text-align: center;
+  }
+  .hero__title {
+    margin-top: 100px;
+    font-size: 50px;
+    padding-right: 0px;
+  }
+  .hero__subtitle {
+    padding-right: 0px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    background: #469557 url("../img/hero/hero-bg.jpg") no-repeat top;
+    background-size: contain;
+    background-size: 150px;
+    padding-top: 250px;
+    padding-bottom: 200px;
+    text-align: center;
+  }
+  .hero__title {
+    margin-top: 100px;
+    font-size: 25px;
+    padding-right: 0px;
+  }
+  .hero__subtitle {
+    font-size: 15px;
+    padding-right: 0px;
   }
 }
 
 .offer {
-  padding: 129px 0;
+  padding: 130px 0;
 }
 
 .offer-block {
@@ -238,7 +302,7 @@ body {
   -webkit-box-shadow: 0 5px 15px rgba(38, 38, 38, 0.4);
           box-shadow: 0 5px 15px rgba(38, 38, 38, 0.4);
   padding: 80px;
-  margin-top: -150px;
+  margin-top: -170px;
   background: #fff url("../img/offer-bg.jpg") no-repeat center right;
   background-size: contain;
 }
@@ -268,7 +332,6 @@ body {
 
 .offer .form__label {
   display: block;
-  font-size: 15px;
 }
 
 .offer .form__group {
@@ -284,6 +347,44 @@ body {
 .offer .form__button {
   margin-top: 10px;
   width: 60%;
-  font-size: 15px;
+  font-size: 20px;
+}
+
+.offer .form__select {
+  width: 100%;
+  margin-top: 10px;
+  border-right: 0;
+}
+
+@media (max-width: 1199px) {
+  .offer-block {
+    background-position: center right -100px;
+  }
+}
+
+@media (max-width: 960px) {
+  .offer-block {
+    background: none;
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .form__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 20px;
+  }
+  .form__group {
+    width: 100%;
+  }
+  .form__label {
+    font-size: 20px;
+  }
+  .form__input {
+    margin-bottom: 10px;
+    height: 50px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
